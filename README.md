@@ -1,4 +1,6 @@
 # prime_experts
 Repositório para os códigos das aulas do Prime Experts.
 
-Junho/2021
+Iniciado em 14-Junho-2021
+
+okgo
