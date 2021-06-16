@@ -7,7 +7,6 @@ ${MENSAGEM}    Hello World!!!
 @{FRUTAS}      banana           maça                   laranja
 
 *** Test Cases ***
-
 Meu teste de impressão no terminal
     Logar no meu terminal uma MENSAGEM
 
@@ -21,7 +20,6 @@ Meu teste de impressão lista de FRUTAS
 Logar no meu terminal uma MENSAGEM
     Log To Console    ${\n}
     Log To Console    ${MENSAGEM}
-    Log To Console    ${nova_fruta}
 
 Logar no meu terminal uma PESSOA
     Log To Console    ${\n}
@@ -30,9 +28,11 @@ Logar no meu terminal uma PESSOA
     Log To Console    ${PESSOA.nome} ${PESSOA.sobrenome} ${PESSOA.idade} anos!
     
 Logar no meu terminal uma LISTA
-    ${outra_fruta}        Set Variable    morango
-    Set Test Variable     ${nova_fruta}    abacaxi
+    ##Declaro localmente uma nova variavel
+    ${outra_fruta}        Set Variable    Abacaxi
+    ##Declaro uma nova variavel em escopo de teste
+    Set Test Variable     ${nova_fruta}    morango
     Log To Console        ${\n}
-    Log To Console        ${FRUTAS}
+    Log To Console        ${FRUTAS} ${nova_fruta}
     Log Many              ${FRUTAS}
-    Log To Console        ${nova_fruta}-&{outra_fruta}
+    Log To Console        ${nova_fruta}-${outra_fruta}
