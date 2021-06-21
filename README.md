@@ -3,9 +3,8 @@ Repositório para os códigos das aulas do Prime Experts junho/2021 realizado pe
 
 Como instalar o roboit framework: pip install -U robotframework
 
-Como subir uma alteração no GitHub
-
-1º faz uma modificação no arquivo la no visual code
+Como subir uma alteração no GitHub:
+1º git status verifica se há modificações nos arquivos
 2º git add . (para adicionar as modificações)
 3º git commit -m "Uma mensagem explicativa" (para efetivar a alteração)
 4º git push
@@ -15,4 +14,6 @@ Set Test Variable = faz com que todas as KWs do teste enxerguem a variável!
 Set Suite Variable = faz com que todas os testes da suíte enxerguem a variável!
 Set Global Variable = faz com que todas suítes da execução enxerguem a variável!
 
-Comando de execução: robot variables\teste_variaveis.robot
+Comando de execução:
+robot . = executa todos os testes de um diretório
+robot -d ./log "somente um caso de teste da suíte" teste.robot  = executa um caso de teste
